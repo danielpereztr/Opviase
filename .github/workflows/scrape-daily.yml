@@ -13,35 +13,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1) Descarga TODO el historial del repo (fetch-depth: 0)
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # <--- OJO: Bajamos todo el historial
+          fetch-depth: 0  # Bajar todo el historial
 
-      # 2) Configurar Python
+      - name: Pull to rebase
+        run: git pull --rebase origin main
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.9"
 
-      # 3) Instalar dependencias
       - name: Install dependencies
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4) Ejecutar tu script de scrape
       - name: Run scraping script
         run: python scrape.py
 
-      # 5) Antes de pushear, haz pull para integrar los posibles
-      #    cambios que haya en la rama remota.
-      - name: Pull new changes
-        run: |
-          git pull --rebase origin main
-
-      # 6) Si hay cambios en datos.csv, haz commit y push
       - name: Commit and push changes
         run: |
           if [ -n "$(git status --porcelain)" ]; then
