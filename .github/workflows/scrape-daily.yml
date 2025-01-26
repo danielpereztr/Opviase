@@ -3,7 +3,7 @@ name: Daily Data Scraping
 on:
   # Programa de ejecución una vez al día a medianoche (UTC).
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "23 45 * * *"
   # Opcional: Permite también dispararlo manualmente desde 'Actions' -> 'Run workflow'
   workflow_dispatch:
 
