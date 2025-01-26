@@ -1,0 +1,48 @@
+name: Daily Data Scraping
+
+on:
+  # Programa de ejecución una vez al día a medianoche (UTC).
+  schedule:
+    - cron: "0 0 * * *"
+  # Opcional: Permite también dispararlo manualmente desde 'Actions' -> 'Run workflow'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1) Checkout del repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2) Configurar Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"  # O la versión que prefieras
+
+      # 3) Instalar dependencias
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 4) Ejecutar script
+      - name: Run scraping script
+        run: |
+          python scrape.py
+
+      # 5) Commit y push de cambios si `datos.csv` se ha modificado
+      - name: Commit and push changes
+        run: |
+          # Opcional: Comprueba si hay algo cambiado
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add datos.csv
+            git commit -m "chore: update datos.csv [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
