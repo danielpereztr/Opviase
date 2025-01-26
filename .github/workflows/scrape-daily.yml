@@ -31,6 +31,7 @@ jobs:
       # 4) Ejecutar script
       - name: Run scraping script
         run: |
+          ls
           python scrape.py
 
       # 5) Commit y push de cambios si `datos.csv` se ha modificado
