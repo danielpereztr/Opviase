@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Opviase: Observatorio del Precio de la VIvienda en Alquiler de SEvilla</title>
+  
+  <!-- Referencia a Bootstrap 4 (o 5) para mantener el estilo similar a bs4Dash -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  >
+  
+  <!-- Si quieres un CSS propio adicional, descomenta esto:
+  <link rel="stylesheet" href="styles.css">
+  -->
+  
+  <style>
+    /* Estilos mínimos en línea para inspirarse en bs4Dash */
+    
+    body {
+      font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar-brand img {
+      max-height: 40px;
+      margin-right: 10px;
+    }
+    
+    .jumbotron {
+      background-color: #17a2b8; /* color info */
+      color: white;
+      margin-bottom: 0;
+      padding: 3rem 2rem;
+    }
+    
+    .jumbotron h1 {
+      font-weight: 600;
+    }
+    
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    
+    /* Estilo para el footer */
+    footer {
+      background: #343a40;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Barra de navegación superior -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="res/giralda.png" alt="Opviase Logo">
+    Opviase: Observatorio del Precio de la VIvienda en Alquiler de SEvilla
+  </a>
+  <!-- Botón de Hamburguesa (opcional) -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" 
+          aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <!-- Enlaces (si quieres más secciones de menú) -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <!-- Ajusta o elimina según prefieras -->
+      <li class="nav-item">
+        <a class="nav-link" href="#datos">Datos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#modelo">Modelo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contacto">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Encabezado principal (jumbotron) -->
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">Bienvenido a Opviase</h1>
+    <p class="lead">
+      Observatorio del Precio de la Vivienda en Alquiler de Sevilla.
+    </p>
+    <hr class="my-4">
+    <p>Monitorizamos y modelizamos el coste del alquiler en distintas zonas de la ciudad.</p>
+    <a class="btn btn-danger btn-lg" href="https://daniperez.shinyapps.io/Opviase/"
+       role="button">
+      Ir a la herramienta
+    </a>
+    <a class="btn btn-light btn-lg" href="https://raw.githubusercontent.com/danielpereztr/Opviase/main/datos.csv"
+       role="button">
+      Descargar datos
+    </a>
+  </div>
+</div>
+
+<!-- Contenido principal -->
+<div class="container my-5">
+  
+  <!-- Sección DATOS -->
+  <h2 id="datos" class="section-title">Datos disponibles</h2>
+  <p>
+    Contamos con un conjunto de datos históricos extraídos de Idealista a través de capturas
+    diarias en la <a href = "http://web.archive.org/">WayBackMachine</a>. Estos datos abarcan distintos distritos y barrios de Sevilla,
+    e incluyen el precio medio de alquiler por m², la fecha de la captura y la URL archivada.
+    Periódicamente se actualiza el CSV para reflejar las últimas capturas disponibles.
+  </p>
+  <p>
+    Puedes descargar los datos completos en formato CSV directamente desde nuestro 
+    repositorio de GitHub:
+    <a href="https://raw.githubusercontent.com/danielpereztr/Opviase/main/datos.csv">
+      opviase/datos.csv
+    </a>.
+  </p>
+  
+  <!-- Sección MODELO -->
+  <h2 id="modelo" class="section-title">Modelo de predicción</h2>
+  <p>
+    Utilizamos un <strong>Generalized Additive Model (GAM)</strong> con splines en el tiempo y
+    efectos aleatorios espaciales (distrito y barrio). Esto nos permite:
+  </p>
+  <ul>
+    <li>Capturar la evolución temporal suavizada del precio.</li>
+    <li>Reflejar heterogeneidad espacial a nivel de distrito y barrio.</li>
+    <li>Generar predicciones para meses futuros, con intervalos de confianza.</li>
+  </ul>
+  <p>
+    Gracias a la librería <em>mgcv</em> en R, podemos obtener estimaciones y proyecciones 
+    de la evolución del alquiler en distintas zonas de la ciudad.
+  </p>
+
+  <!-- Sección CREACIÓN / AUTOR -->
+  <h2 id="contacto" class="section-title">Acerca del creador</h2>
+  <p>
+    Esta plataforma ha sido desarrollada por <strong>Daniel Pérez Troncoso</strong>.
+    Para cualquier duda, sugerencia o colaboración, 
+    puedes contactar a través de 
+    <a href="mailto:dpereztr@gmail.com">dpereztr@gmail.com</a>.
+  </p>
+  
+</div>
+
+<!-- Pie de página -->
+<footer>
+  <div class="container">
+    <p class="m-0">© 2025 Opviase. Observatorio del Precio de la Vivienda en Alquiler de Sevilla.</p>
+  </div>
+</footer>
+
+<!-- JS de Bootstrap (opcional si quieres menús colapsables) -->
+<script 
+  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+></script>
+<script 
+  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+></script>
+
+</body>
+</html>
