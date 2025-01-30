@@ -59,26 +59,26 @@ URLS = [
     # "https://www.idealista.com/alquiler-viviendas/sevilla/triana/el-tardon/",
     # "https://www.idealista.com/alquiler-viviendas/sevilla/triana/barrio-leon/",
     # "https://www.idealista.com/alquiler-viviendas/sevilla/triana/isla-de-la-cartuja/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/valdezorras-el-gordillo/valdezorras-el-gordillo/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/palmete-padre-pio-hacienda-san-antonio/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/santa-aurelia/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/los-pajaritos/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/juan-xxiii/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/rochelambert/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/la-plata/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/prado-de-san-sebastian-felipe-ii-bueno-monreal/el-porvenir/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/prado-de-san-sebastian-felipe-ii-bueno-monreal/prado-de-san-sebastian-ramon-carande/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/prado-de-san-sebastian-felipe-ii-bueno-monreal/felipe-ii-bueno-monreal/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/triana/lopez-de-gomara/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/santa-clara/santa-clara/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/valdezorras-el-gordillo/valdezorras-el-gordillo/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/palmete-padre-pio-hacienda-san-antonio/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/santa-aurelia/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/los-pajaritos/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/juan-xxiii/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/rochelambert/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/la-plata/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/prado-de-san-sebastian-felipe-ii-bueno-monreal/el-porvenir/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/prado-de-san-sebastian-felipe-ii-bueno-monreal/prado-de-san-sebastian-ramon-carande/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/prado-de-san-sebastian-felipe-ii-bueno-monreal/felipe-ii-bueno-monreal/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/triana/lopez-de-gomara/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/santa-clara/santa-clara/",
     "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/ctra-de-carmona-miraflores/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/arroyo-santa-justa/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/cruz-roja-capuchinos/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/la-salle-avd-manuel-del-valle-las-naciones/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/torreblanca/torreblanca/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/prado-de-san-sebastian-felipe-ii-bueno-monreal/tiro-de-linea/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/amate/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/su-eminencia-la-oliva/"
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/arroyo-santa-justa/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/cruz-roja-capuchinos/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/la-salle-avd-manuel-del-valle-las-naciones/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/torreblanca/torreblanca/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/prado-de-san-sebastian-felipe-ii-bueno-monreal/tiro-de-linea/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/amate/",
+    # "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/su-eminencia-la-oliva/"
 ]
 
 BASE_URL = "https://web.archive.org"
@@ -110,7 +110,7 @@ claves_existentes = set(
 )
 
 # 2. Seleccionar solo 5 URLs de manera aleatoria
-num_urls_a_tomar = 20
+num_urls_a_tomar = 1
 urls_seleccionadas = random.sample(URLS, num_urls_a_tomar)  # Elige 5 al azar
 
 nuevos_resultados = []
