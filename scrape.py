@@ -109,7 +109,7 @@ claves_existentes = set(
 )
 
 # 2. Seleccionar solo 5 URLs de manera aleatoria
-num_urls_a_tomar = 18
+num_urls_a_tomar = 19
 urls_seleccionadas = random.sample(URLS, num_urls_a_tomar)  # Elige 5 al azar
 
 nuevos_resultados = []
