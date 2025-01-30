@@ -32,7 +32,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run scraping script
-        run: python scrape2.py
+        run: python scrap2.py
 
       - name: Commit and push changes
         run: |
