@@ -76,7 +76,8 @@ URLS = [
     "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/cruz-roja-capuchinos/",
     "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/la-salle-avd-manuel-del-valle-las-naciones/",
     "https://www.idealista.com/alquiler-viviendas/sevilla/torreblanca/torreblanca/",
-    "https://www.idealista.com/alquiler-viviendas/sevilla/prado-de-san-sebastian-felipe-ii-bueno-monreal/tiro-de-linea/"
+    "https://www.idealista.com/alquiler-viviendas/sevilla/prado-de-san-sebastian-felipe-ii-bueno-monreal/tiro-de-linea/",
+    "https://www.idealista.com/alquiler-viviendas/sevilla/cerro-amate/amate/"
 ]
 
 BASE_URL = "https://web.archive.org"
