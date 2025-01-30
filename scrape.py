@@ -72,6 +72,9 @@ URLS = [
     "https://www.idealista.com/alquiler-viviendas/sevilla/triana/lopez-de-gomara/",
     "https://www.idealista.com/alquiler-viviendas/sevilla/santa-clara/santa-clara/",
     "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/ctra-de-carmona-miraflores/",
+    "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/arroyo-santa-justa/",
+    "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/cruz-roja-capuchinos/",
+    "https://www.idealista.com/alquiler-viviendas/sevilla/santa-justa-miraflores-cruz-roja/la-salle-avd-manuel-del-valle-las-naciones/",
     "https://www.idealista.com/alquiler-viviendas/sevilla/torreblanca/torreblanca/"
 ]
 
@@ -104,7 +107,7 @@ claves_existentes = set(
 )
 
 # 2. Seleccionar solo 5 URLs de manera aleatoria
-num_urls_a_tomar = 14
+num_urls_a_tomar = 17
 urls_seleccionadas = random.sample(URLS, num_urls_a_tomar)  # Elige 5 al azar
 
 nuevos_resultados = []
